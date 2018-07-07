@@ -1,6 +1,6 @@
 {
   "name": "@sabyasachibiswal/validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validate input data with rules and customised error messages.",
   "homepage": "http://sabyasachibiswal.com",
   "main": "index.js",
@@ -16,7 +16,7 @@
   },
   "files": [
     "index.js",
-    "LICENCE",
+    "LICENCE"
   ],
   "keywords": [
     "validator",
