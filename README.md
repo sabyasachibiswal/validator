@@ -30,6 +30,7 @@ exports.Signup = function(req , res) {
         password : "my-secret"
     };
     
+    // Rules for validations
     var validationRules = {
         name : "required|string",
         email : "required|email",
@@ -37,6 +38,7 @@ exports.Signup = function(req , res) {
         captcha : "required"
     };
     
+    // Optional - Custom messages
     var customMessages = {
         name : {
             required : "Name is required",
@@ -55,12 +57,16 @@ exports.Signup = function(req , res) {
         }
     };
     
+    // Validate
     var validator = new Validator(inputData, validationRules, customMessages).validate();
+    
+    // Check if validation failed
     if(validator.valid === false){
         // Error
         return res.json({status : "error", errors : validator.getAllErrorsMessages()});
     }else{
         // Create user
+        ...
         
         // Return success response
         return res.json({status : "success", message : "Signup successful"});
