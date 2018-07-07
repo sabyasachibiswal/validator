@@ -7,16 +7,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sabyasachibiswal/validator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sabyasachibiswal/validator/issues"
+  },
   "files": [
     "index.js",
-    "README.md",
     "LICENCE",
-    "validator.js",
-    "validator.min.js"
   ],
   "keywords": [
     "validator",
     "input",
+    "form-validator",
+    "node",
+    "express",
     "laravel"
   ],
   "author": "Sabyasachi Biswal <sabyasachi.biswal4@gmail.com>",
