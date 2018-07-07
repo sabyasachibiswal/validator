@@ -1,0 +1,27 @@
+{
+  "name": "@sabyasachibiswal/validator",
+  "version": "1.0.0",
+  "description": "Validate input data with rules and customised error messages.",
+  "homepage": "http://sabyasachibiswal.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENCE",
+    "validator.js",
+    "validator.min.js"
+  ],
+  "keywords": [
+    "validator",
+    "input",
+    "laravel"
+  ],
+  "author": "Sabyasachi Biswal <sabyasachi.biswal4@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "sprintf-js": "^1.1.1"
+  }
+}
