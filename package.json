@@ -12,11 +12,14 @@
     "url": "https://github.com/sabyasachibiswal/validator.git"
   },
   "bugs": {
-    "url": "https://github.com/sabyasachibiswal/validator/issues"
+    "url": "https://github.com/sabyasachibiswal/validator/issues",
+    "email" : "sabyasachi.biswal4@gmail.com"
   },
   "files": [
+    ".gitignore",
     "index.js",
-    "LICENCE"
+    "LICENCE",
+    "package.json"
   ],
   "keywords": [
     "validator",

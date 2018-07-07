@@ -235,9 +235,6 @@ Validator.prototype.setError = function(field, rule) {
     var paramsArr = [field]; // default paramArr contains field name
     paramsArr = paramsArr.concat(this.getRuleParams(rule));
 
-    console.log("PARAMS  : " , paramsArr);
-
-
     // get the default error
     var e = {}; e[sanitizedRuleStr] = vsprintf(DEFAULT_ERROR_MESSAGES[sanitizedRuleStr], paramsArr);
 
@@ -328,6 +325,18 @@ Validator.prototype.getFirstErrorMessageFor = function(fieldName) {
     return retErr;
 };
 
+/**
+ * HAS ERROR
+ * @param fieldName
+ * @returns {boolean}
+ */
+Validator.prototype.hasError = function(fieldName) {
+    var hasError = false;
+    if(this.errorMessages.hasOwnProperty(fieldName) && this.errorMessages[fieldName] !== null && this.errorMessages[fieldName] !== undefined ){
+        hasError = true;
+    }
+    return hasError;
+};
 
 
 /**
@@ -366,7 +375,6 @@ Validator.prototype.getRuleParams = function(ruleStrInput) {
             }
         }
     }
-    console.log("RET PARAMS for rule str : "+ruleStrInput+" = ", retParams);
     return retParams;
 };
 
