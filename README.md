@@ -66,7 +66,7 @@ exports.Signup = function(req , res) {
         return res.json({status : "error", errors : validator.getAllErrorsMessages()});
     }else{
         // Create user
-        ...
+        //...
         
         // Return success response
         return res.json({status : "success", message : "Signup successful"});
