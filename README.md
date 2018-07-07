@@ -31,7 +31,7 @@ exports.Signup = function(req , res) {
     };
     
     var validationRules = {
-        name : "required|string|nospecial",
+        name : "required|string",
         email : "required|email",
         password : "required|min:6",
         captcha : "required"
@@ -41,27 +41,24 @@ exports.Signup = function(req , res) {
         name : {
             required : "Name is required",
             string : "Name must contain only alphabets",
-            nospecial : "Name shouldn't contain any special characters"
         },
         email : {
             required : "Email is required",
             email : "Email must be a valid email address"
         },
-        mobile : {
-            password : "Mobile field is missing",
-            mobile_with_country_code : "Must be a valid mobile number with country code"
+        password : {
+            required : "Password is required",
+            min : "Password must be minimum 6 characters"
         },
         captcha : {
             required : "Captcha is required"
         }
     };
     
-    var validator = new Validator(inputData, validationRules, customMessages);
-    validator = validator.validate();
+    var validator = new Validator(inputData, validationRules, customMessages).validate();
     if(validator.valid === false){
         // Error
-        var errors = validator.getAllErrorsMessages();
-        return res.json({status : "error", errors : errors});
+        return res.json({status : "error", errors : validator.getAllErrorsMessages()});
     }else{
         // Create user
         
