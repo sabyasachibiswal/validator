@@ -1,5 +1,7 @@
 # sabyasachibiswal/validator
 
+![@sabyasachibiswal/validator npm badge](https://img.shields.io/npm/v/@sabyasachibiswal/validator.svg) ![@sabyasachibiswal/validator npm downloads badge](https://img.shields.io/npm/dm/@sabyasachibiswal/validator.svg) 
+
 Node.js validators - Data validator engine for validating input data / form data, with customisable error messages for each field.
 
 ## Getting started
